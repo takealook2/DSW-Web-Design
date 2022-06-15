@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        table { /*테두리*/
+            border: 2px solid rgb(203, 45, 235);
+            border-collapse: collapse; /*두 줄을 한 줄로 보이게 함*/
+        } 
+        td { /*안 쪽의 표*/
+            border: 2px solid rgb(203, 45, 235);
+            padding: 0px; /*살짝 뜬 선을 완전히 없애주도록*/
+        }
+        img {
+            vertical-align: bottom; 
+        }
+        a, a:visited {
+            color: rgb(204, 106, 196);
+            text-decoration: none;
+            font-size: 20px;
+            font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+        }
+        a:hover { /*마우스를 링크에 가져다댔을때*/
+            color: rgb(70, 70, 161);
+            text-decoration: none;
+        }
+    </style> 
+</head>
+<body>
+    <a name="top">위</a><br>
+    <a href="http://www.ds.ac.kr" target="_blank">덕성여대</a>
+    <a href="http://www.naver.com" target="_blank">네이버</a>
+    <a href="http://www.daum.net" target="_blank">다음</a><br>
+    <a href=#bot>아래로</a><br>
+    <a href=form1.html target="_blank">폼 연습1</a><br>
+    <a href=form2.html target="_blank">폼 연습2</a><br>
+    <a href=css_test1.html target="_blank">css 연습1</a><br>
+    <a href=css_test2.html target="_blank">css 연습2</a><br>
+    <a href=css_test3.html target="_blank">css 연습3</a><br>
+    <a href=css_box1.html target="_blank">box 연습1</a><br>
+    <a href=layout2.html target="_blank">레이아웃 연습1</a><br>
+    <a href=layout3.html target="_blank">레이아웃 연습2</a><br>
+    <a href=css_sel2.html target="_blank">레이아웃 연습3-호텔 예약하기1</a><br>
+    <a href=reserve.html target="_blank">레이아웃 연습3-호텔 예약하기2</a><br>
+    <a href=intro1.html target="_blank">상품 간단한 효과 주기</a><br>
+    <h1>내가 좋아하는 것들</h1>
+    <ol type="A" start="3"> <!--순서가 정해진 list-->
+        <li>고양이</li>
+        <li>강아지</li>
+        <li>앵무새</li>
+    </ol>
+    <h2>내가 하고 싶은 것들</h2>
+    <ul type="square"> <!--순서가 정해지지 않은 list-->
+        <li>잠</li>
+        <li>잠</li>
+        <li>잠</li>
+    </ul>
+    <dl> <!-- dl의 의미 decription list -->
+        <dt><b>사계절</b></dt> <!--description title-->
+        <dd>봄</dd> <!--description data-->
+        <dd>여름</dd>
+        <dd>가을</dd>
+        <dd>겨울</dd>
+    </dl>
+    <!-- <table border="1"> 표 제작 테이블 tr:table row(행)/td:table data cell(열) -->
+        <!-- <tr> 행 합:rowspan -->
+            <!-- <td width="100" height="100" colspan="2">1</td> 열 합:colspan -->
+            <!-- <td width="100" height="100" rowspan="3">3</td>
+        </tr>
+        <tr>
+            <td width="100" height="100">4</td>
+            <td width="100" height="100">5</td>
+        </tr>
+        <tr>
+            <td width="100" height="100">7</td>
+            <td width="100" height="100">8</td>
+        </tr> -->
+    <!-- </table> -->
+    <table border="1">
+        <caption><strong>표 연습</strong></caption>
+        <tr>
+            <td width="100" height="100" colspan="2"><img src="a1.jpg" alt="sad cat" width="202" height="100"></td> <!--1행/200으로 하면 선이 1px이라서 붕 뜸-->
+            <!-- <td width="100" height="100">2</td> -->
+            <td width="100" height="100">3</td>
+        </tr>
+        <tr>
+            <td width="100" height="100"><a href="http://www.naver.com" target="_blank"><img src="a1.jpg" alt="sad cat" width="100" height="100"></a></td> <!--2행-->
+            <td width="100" height="100">5</td>
+            <td width="100" height="100">6</td>
+        </tr>
+        <tr>
+            <td width="100" height="100">7</td> <!--3행-->
+            <td width="100" height="100">8</td>
+            <td width="100" height="100">9</td>
+        </tr>
+    </table>
+
+    <img src="a1.jpg" alt="sad cat" usemap="#cat1"> <!--세로는 자동으로/50%는 웹 브라우저 창 너비와 높이를 기준으로 조정-->
+    <map name="cat1"> <!--coords x,y,x1,y2 왼쪽상단 오른쪽하단-->
+        <area shape="rect" coords="394,242,479,302" href="http://www.ds.ac.kr" target="_blank">
+        <area shape="rect" coords="240,242,324,302" href="http://www.ds.ac.kr" target="_blank">
+    </map>
+    <p></p> <!--object-->
+        <!-- <object data="ptest.pdf" width="400" height="500"></object>
+        <object data="bgsound.mp3"></object>
+        <object data="fire.mp4" width="300" height="300"></object> -->
+    <p></p> <!--오브젝트, 오디오, 비디오 태그를 지원하는-->
+        <!-- <embed src="ptest.pdf" width="400" height="500">
+        <embed src="bgsound.mp3" width="300" height="20">
+        <embed src="fire.mp4" width="400" height="400"> -->
+    <p></p>
+        <!-- <audio src="bgsound.mp3" controls autoplay></audio> -->
+    <p></p> <!--controls 재생 막대 표시-->
+        <!-- <video src="fire.mp4" controls autoplay muted loop></video> -->
+    <p></p> <!--here reference-->
+    <a name="bot">아래입니다</a>
+    <a href=#top>위로</a>
+</body>
+</html>
+
+<!--시각장애인용 굵기 stong, 이탤릭체 em
+type(로마자, 숫자 등등 변경), start(특정 순서부터 시작)
+table에서 caption:표의 제목
+thead, tbody, tfoot 시각 장애인의 표 구조 이해
+
+시험)
+class, id, 자식-후손 상속, 표 테이블 관련한 거, 셀 합치기
+form 태그, radio, checkbox, 버튼 submit, reset 버튼
+method 방식, 박스 테두리(박스 관련된 거), 객체를 가운데로 옮기는 것(정가운데말고 좌우 가운데 옮기는)
+인라인 블록(메뉴 만들기 예제)
+float, 배경색 배경이미지
+(만약에 책이 있다고 한다면 8장, 9장에 있는 간단한 배경색, 배경이미지)
+뚫은 걸 채우고, 소스를 바꾸려고 한다면 어떻게 바꿀지, 추가적으로 하거나 수정, 넣어라.
+기본적인 것들을 알고 있는지 모르는지 체크하는 정도
+문제는 총 6문제-->

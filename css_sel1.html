@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <style>
+
+        /* 교재 소스 */
+
+         * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background: #ccc;
+            padding: 20px;  
+        }
+
+
+        /*h1 다음에 바로 나오는 p태그에 스타일을 적용한다*/
+        /* h1 + p {   
+            color: red;
+        } */
+
+        /*h1 다음에 나오는 동등한 p태그에 전부 스타일을 입히고 싶다면*/
+        /* h1 ~ p {
+            color: rgb(241, 153, 164);
+        } */
+
+        /* a[href] {
+            color: aquamarine;
+        } */
+
+        /* 속성값이 target="_blank" 인 태그에만 색깔을 적용한다*/
+
+        a[target="_blank"] {
+            background-color: rgb(241, 153, 164);
+        }
+
+        /* class 중에서 gr2가 있다면 */
+        /* ^ 시작, $ 끝, * 포함 */
+        [class^="g"] {
+            font-weight: bold;
+            font-size: large;
+            color: rgb(116, 116, 230);
+        }
+        
+         #signup {
+            background:#fff;
+            border:1px solid #222;
+            border-radius: 5px;
+            padding: 20px;
+            width: 400px;
+            margin:30px auto;
+        }
+        
+        #signup fieldset {
+            border: 1px solid #ccc;
+            margin-bottom: 30px;
+        }
+        
+        #signup legend {
+            font-size: 16px;
+            font-weight: bold;
+            padding-left:5px;
+            padding-bottom: 10px;
+        }
+            
+        #signup ul li {
+            line-height: 30px;
+            list-style: none;
+            padding: 5px 10px;
+            margin-bottom: 2px;
+        }
+            
+        #signup button {  
+            border: 1px solid #222;
+            border-radius: 20px;
+            display: block;
+            font-size: 16px 맑은고딕,굴림,돋움;
+            letter-spacing: 1px;
+            margin: auto;
+            padding: 7px 25px;
+        }
+
+        #signup label {
+            float: left;
+            width: 110px;
+        }
+
+        #signup input[required] {
+            border: 1px solid red;
+        }
+
+        #signup input[readonly] {
+            border: none;
+        }
+        
+        input {
+            height: 15px;
+        }
+
+        input:not([type=radio]) {
+            height: 20px;
+        }
+        
+
+
+    </style>
+
+    <title>Document</title>
+</head>
+    <body>
+        <p>텍스트5</p>
+        <h1>텍스트1</h1>
+        <p class="box1 gr1">텍스트2</p>
+        <p class="gr2">텍스트3</p>
+        <p>텍스트4</p>
+        <a href="http://ds.ac.kr" target="_blank">덕성</a>
+        <a href="http://naver.com">네이버</a><br>
+
+        <form id="signup">
+            <fieldset>
+            <legend>로그인 정보</legend>
+                <ul>
+                    <li>
+                        <label for="userid">아이디</label>
+                        <input id="userid" name="userid" type="text" required autofocus>
+                    </li>
+
+                    <li>
+                        <label for="pwd1">비밀번호</label>
+                        <input id="pwd1" name="pwd1" type="password" required>
+                    </li>
+                    <li>
+                        <label for="pwd2">비밀번호 확인</label>
+                        <input id="pwd2" name="pwd2" type="password" required>
+                    </li> 
+                    <li>
+                        <label for="level">회원 등급</label>
+                        <input id="level" name="level" type="text" readonly value="준회원">
+                    </li>
+                </ul>
+            </fieldset>
+            
+            <fieldset>
+            <legend>개인 정보</legend>
+                <ul>
+                    <li>
+                        <label for="fullname">이름</label>
+                        <input id="fullname" name="fullname" type="text" placeholder="5자미만 공백없이" required>
+                    </li>
+                    <li>
+                        <label for="email">메일 주소</label>
+                        <input id="email" name="email" type="email" placeholder="abcd@domain.com" required autocomplete="off">
+                    </li>
+                    <li>
+                        <label for="tel">연락처</label>
+                        <input id="tel" name="tel" type="tel" autocomplete="off">
+                    </li> 
+                </ul>
+            </fieldset>
+            
+            <fieldset>
+                <button type="submit"> 제출 </button> 
+            </fieldset>
+        </form>
+    </body>
+</html>

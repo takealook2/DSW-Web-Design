@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        #wrap {
+            width: 700px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(3, 100px);
+            grid-template-areas: 
+                "boxa boxa boxa"
+                "boxb boxc boxc"
+                "boxb . boxd";
+        }
+
+        .box1 {
+            background: rgb(240, 192, 201);
+            grid-area: boxa;
+        }
+
+        .box2 {
+            background: rgb(236, 214, 172);
+            grid-area: boxb;
+        }
+
+        .box3 {
+            background: rgb(207, 233, 169);
+            grid-area: boxc;
+        }
+
+        .box4 {
+            background: rgb(182, 223, 240);
+            grid-area: boxd;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <div class="box1">1</div>
+        <div class="box2">2</div>
+        <div class="box3">3</div>
+        <div class="box4">4</div>
+    </div>
+</body>
+</html>

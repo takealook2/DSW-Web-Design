@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        body {
+            /* background-image: url('a3.png'); */
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: bottom;
+
+        }
+        .box1 {
+            width: 250px;
+            height: 200px;
+            padding: 10px;
+            border: 5px dotted rgb(0, 0, 0);
+            background-color:rgb(89, 128, 161);
+            /* background-clip: content-box; */
+            background: url(a2.jpg) no-repeat;
+            /* background-origin: border-box; 이미지가 boder까지 있다*/
+            /* background-origin: content-box; */
+            background-size: 100% 100%;
+        }
+        .box2 {
+            width: 250px;
+            height: 200px;
+            border: 5px solid rgb(0, 0, 0);
+            /* background: linear-gradient(to top right, pink, white); */
+            /* background: linear-gradient(180deg, pink, white); */
+            /* background: linear-gradient(180deg, pink 10%, white 50%, rgb(163, 71, 163)); */
+            background: repeating-linear-gradient(90deg, rgb(0, 0, 0), rgb(0, 0, 0) 1px, white 1px, white 2px);
+        }
+        .box3 {
+            width: 250px;
+            height: 200px;
+            border: 5px solid rgb(0, 0, 0);
+            /* background: radial-gradient(circle farthest-side at 20% 20%, rgb(138, 10, 10), rgb(189, 0, 31) 20%, rgb(255, 238, 0) 80%); */
+            background: repeating-radial-gradient(circle, white, white 10px, pink 10px, pink 20px, skyblue 20px, skyblue 30px);
+        }
+
+        .box4 {
+            width: 200px;
+            height: 200px;
+            border: px solid rgba(255, 255, 255, 0);
+            border-radius: 50%;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            background: radial-gradient(circle at 10% 25%, white, rgb(13, 57, 139));
+            box-shadow: 20px 13px 15px rgba(58, 58, 58, 0.534);
+        }
+
+    </style>    
+</head>
+<body>
+    <div class="box1"></div><br>
+    <div class="box2"></div><br>
+    <div class="box3"></div><br>
+    <div class="box4"></div>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+
+    <style>
+
+    #trans_ea > div {
+        width: 50px; 
+        height: 50px; 
+        border: 1px solid hotpink;
+        background: pink;
+        margin: 20px 20px;
+        float: left;
+        }
+
+    #trans_ea:hover div {
+        height: 200px;
+    }
+
+    #trans_ea .ease {
+        transition: 3s ease;
+    }
+    
+    #trans_ea .easein {
+        transition: 3s ease-in;
+    }
+    
+    
+    #trans_ea .easeout {
+        transition: 3s ease-out;
+    }
+    
+    #trans_ea .easeinout {
+        transition: 3s ease-in-out;
+    }
+
+    #trans_ea .linear {
+        transition: 3s linear;
+    }
+
+    </style>    
+
+</head>
+
+<body>
+    <div id="trans_ea">
+        <div class="ease">ease</div>
+        <div class="easein">easein</div>
+        <div class="easeout">easeout</div>
+        <div class="easeinout">easeinout</div>
+        <div class="linear">linear</div>
+    </div>
+</body>
+</html>

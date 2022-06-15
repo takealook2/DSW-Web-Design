@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        var a=10; //전역변수
+
+        function add1()
+        {
+            b=20; //var 빼고 선언하면 전역변수로 선언된다
+            console.log(b);
+            console.log(b+c);
+            var c=11; //NaN: c가 선언은 되어있는데, 수의 할당은 되지 않음
+            c=22;
+            console.log("C" + c); //재할당이 가능함!
+        }
+
+        function add2()
+        {
+            var sum=0;
+            var i;
+
+            for (i = 1; i <= 5; i++) //let: for문 안에서만 쓸 수 있도록 함
+            {
+                sum = sum + i
+                console.log("i" + i);
+            }
+        }
+        add2();
+        // console.log(b);
+
+        function hab(a,b) {
+                var sum=a+b;
+                return sum;
+            }
+
+            // var reply=hab(3,5);
+            // alert(reply);
+
+            function comp(c,d) { //c와 d를 비교하는 함수
+
+                var max;
+
+                if (c>d) {
+                    max=c;
+                }
+
+                else if (c<d) {
+                    max=d;
+                }
+
+                else {
+                    max=c; //c와 d값이 똑같을 때
+                }
+
+                return max; //리턴값!
+            }
+
+            var rep=comp(4,5) //값을 받을 때 어떻게 받아?
+            alert(rep); //답을 부른다.
+  
+    </script>
+</body>
+</html>

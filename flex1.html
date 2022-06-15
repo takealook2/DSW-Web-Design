@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .cont1 {
+            width: 500px;
+            height: 200px;
+            border: 3px solid black;
+            display: flex;
+            border-radius: 15px;
+        }
+
+        .box1 {
+            width: 100px;
+            height: 50px;
+            margin: 5px;
+            border: 3px solid rgb(78, 43, 141);
+            background-color: rgb(208, 201, 255);
+            border-radius: 15px;
+        }
+
+        p {
+            text-align: center;
+        }
+
+        /* #dir {
+            flex-direction: row;
+            flex-direction: row-reverse;
+            flex-direction: column;
+            flex-direction: column-reverse;
+        }
+         */
+
+         /*여러 줄이 나오게 하고 싶다면 wrap 이용*/
+        /* #wrap {
+            flex-wrap: wrap;
+        } */
+        
+        /* #flow {
+            flex-flow: column wrap;
+        } */
+
+        #just {
+            /* justify-content: flex-end; 오른쪽 정렬 */
+            /* justify-content: flex-start; 왼쪽 정렬 */
+            /* justify-content: space-between; */
+            /* justify-content: space-around; 좌우여백, 간격일정 */
+            justify-content: center;
+            flex-flow: row wrap;
+            align-items: center;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="cont1" id="just">
+        <div class="box1"><p>1</p></div>
+        <div class="box1"><p>2</p></div>        
+        <div class="box1"><p>3</p></div>
+        <div class="box1"><p>4</p></div>
+        <div class="box1"><p>5</p></div>
+        <div class="box1"><p>6</p></div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Gowun+Batang&display=swap'); 
+        * {
+            font-family: 'Gowun Batang', serif;
+            text-align: center;
+            font-size: 1.2em;
+            font-weight: bold;
+        }
+        div {
+            padding: 10px;
+        }
+
+        #ch_text1 {
+            font-size: 1em;
+            /* display: inline; */
+        }
+    </style>
+</head>
+<body>
+    <div id="head1">자바 스크립트</div>
+    <div id="text1">이름 입력</div>
+    <div id="age1">생년월일</div>
+    <div id="color1">색상선택</div>
+    <div id="color2">색상선택2</div>
+    <button onclick="chColor()">색상선택3</button>
+    <p></p>
+    <span id="ch_text1">색상이 변경될 텍스트</span>
+
+    <script src="a.js"> //head1을 불러와서 변수 heading에 저장
+        // var heading=document.querySelector('#head1');
+        //     heading.onclick=function(){
+        //         alert("클릭!")
+        //     }
+    </script>
+</body>
+</html>

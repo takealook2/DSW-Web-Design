@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        .box1 {
+            width: 150px;
+            height: 150px;
+            border: 1px solid black;
+            margin: 20px auto;
+            text-align: center;
+            line-height: 150px;
+        }
+
+        /* .box1:hover {
+            transform: translate(50px, 50px);
+        } */
+
+        /*앞으로 변경될, 도착지점의 이미지*/
+        .box1 >div {
+            width: 150px;
+            height: 150px;
+            border: 1px solid black;
+            /* margin: 20px auto; */
+            text-align: center;
+            line-height: 150px;
+            /* background-color: aliceblue; */
+            transition: all 2s; /*all: 모든 걸 변하게 하겠다*/
+        }
+
+        #per {
+            perspective: 200px;
+        }
+        #trans:hover {
+            transform: translate3d(50px, 30px, 60px);
+            background-color: aliceblue; /*가져다 대면 색깔이 변하도록 하겠다*/
+        }
+        
+        #scale:hover {
+            transform: scale3d(1.5, 3, 3); /* scalex: x축, scaley: y축, 변수만 넣으면 둘다 적용됨*/
+            background-color: aliceblue; 
+        }
+
+        #rotate:hover {
+            /* transform: rotatex(360deg); */
+            transform: rotate3d(1.2, 1.5, 1.5, 45deg);
+            background-color: aliceblue; 
+        }
+        
+        #skew:hover { /*잡아당기는 정도*/
+            transform: skewx(45deg);
+            background-color: aliceblue; 
+        }
+
+        .box2 {
+            width: 150px;
+            height: 150px;
+            border: 1px solid black;
+            margin: 20px auto;
+            background-color: rgb(84, 124, 197);
+            transition: all 2s ease-in-out; /*느리게 시작하고 느리게 끝남*/
+        }
+
+        .box2:hover {
+            background-color: rgb(185, 79, 106); 
+            width: 300px;
+            height: 150px;
+            border: 1px solid black;
+        }
+
+
+        
+    </style>
+</head>
+<body>
+    <div class="box1" id="per"><div id="trans">이동</div></div>
+    <div class="box1" id="per"><div id="scale">크기</div></div>
+    <div class="box1" id="per"><div id="rotate">회전</div></div>
+    <div class="box1" id="per"><div id="skew">왜곡</div></div>
+    <div class="box2"></div>
+    
+</body>
+</html>

@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+
+    <style>
+
+      @import url('https://fonts.googleapis.com/css2?family=Gowun+Batang&display=swap'); 
+
+      body {
+        font-family: 'Gowun Batang', serif;
+      }
+
+      .navi {
+        width: 600px;
+        height: 70px;
+        margin: 10px auto;
+        border-bottom: 3px solid black;
+        font-size: 1.2em;
+        font-weight: bold;
+      }
+
+      .navi ul {
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        padding: 0;
+      }
+        
+      .navi ul > li{
+        float: left;
+        padding: 20px 20px;
+      }
+      
+        
+      .navi a:link, a:visited { /*방문하지 않았을 때, 방문했을 때*/
+        text-decoration: none;
+        color: black;
+      }
+
+      .navi a:hover {
+        color: rgb(219, 98, 108);
+      }
+
+      /*#inf 해당 메뉴를 눌렀을 때 스타일이 바뀌도록 설정할 수 있음, 현재는 배경색이 바뀌도록 설정*/
+      #inf:target { 
+        background-color: rgba(238, 192, 205, 0.459);
+      }
+
+      #room:target {
+        color: white;
+        background: url('background2.jpg');
+        background-size: 100%;
+      }
+
+      #resv:target {
+        background-color: rgba(238, 192, 205, 0.459);
+      }
+
+      #signup {
+        width: 400px;
+        margin: 0 auto;
+        clear: left;
+      }
+
+      #signup ul {
+        list-style: none;
+      }
+
+      #signup fieldset {
+        background-color: rgba(238, 192, 205, 0.459);
+      }
+
+      /*정렬. float를 왼쪽으로 보내야 제대로 먹힌다. 왜지?*/
+      #signup fieldset:first-of-type label {
+        width: 100px;
+        float: left;
+      }
+
+      #signup button {
+        width: 80px;
+        height: 30px;
+        margin: 0 auto;
+        line-height: 30px;
+        display: block;
+        background-color: white;
+        border: 1px solid black;
+      }
+
+      #signup button:hover {
+        background-color: rgba(238, 192, 205, 0.459);
+      }
+
+      /*checked+label 플러스의 이미: 인풋 라디오 체크가 되어있다면 다음에 나오는 라벨 중 첫번째의 색깔을 변화시킨다*/
+      #signup input:checked+label { 
+        color: rgb(219, 98, 108);
+        font-weight: bold;
+      } 
+
+      /*무조건 자식 중에서 3번째*/
+      /* #ch :nth-child(3) { 
+        color: palevioletred
+      } */
+
+       /*p 중에서 3번째, 2n, even:짝수, odd:홀수*/
+      /* #ch p:nth-of-type(even) {
+        color: blueviolet;
+        font-weight: bold;
+      } */
+
+      /*무조건 자식태그 중 n번째에게 스타일이 적용됨*/
+      /* #ch :nth-child(3) {
+        color: red;
+      }  */
+
+      
+      #ch p:nth-of-type(4) {
+        font-style: italic;
+      } 
+
+      /* #ch :first-child {
+        background-color: pink;
+      }  */
+
+      #ch h3:first-of-type {
+        background-color: plum;
+      }
+
+      #ch p:nth-of-type(even)::after {
+        content: "new!"; color: rgb(240, 130, 163); font-weight: bold; font-style: italic;
+      }
+
+      /*p타입의 마지막 쪽에 있는 em*/
+      /* #ch p:last-of-type em {
+        font-weight: bold;
+      } */
+
+      /* #ch :nth-of-type em {
+        font-weight: bold;
+      } */
+
+
+    </style>
+</head>
+<body>
+    <nav class="navi">
+      <ul> <!--동일한 문서 내에서 이동할 때 #아이디 사용(이름 지정)-->
+            <li><a href="css_sel2.html#inf">이용 안내</a></li>
+            <li><a href="css_sel2.html#room">객실 소개</a></li>
+            <li><a href="css_sel2.html#resv">예약 방법 및 요금</a></li>
+            <li><a href="reserve.html">예약하기</a></li>
+      </ul>
+    </nav>  
+    <form id="signup">    
+        <fieldset>
+          <legend>개인 정보</legend>
+          <ul>
+            <li>
+              <label for="fullname">이름</label>
+              <input id="fullname" name="fullname" type="text" required>
+            </li>
+            <li>
+              <label for="tel">연락처</label>
+              <input id="tel" name="tel" type="tel">
+            </li>          
+          </ul>
+        </fieldset>
+        <fieldset>  
+          <legend>객실 형태</legend>
+          <ul>
+            <li>
+              <input type="radio" name="room" id="basic">
+              <label for="basic">기본형(최대 2인)</label>
+            </li>      
+            <li>
+              <input type="radio" name="room" id="family">
+              <label for="family">가족형(최대 8인)</label>
+            </li>          
+          </ul>
+        </fieldset><br>
+        <button type="submit"> 제출 </button>
+    </form>
+
+    <!--#ch 부모자식손자 실습-->
+    <div id="ch">
+      <p>테스트1</p>
+      <p>테스트2<em>강조</em></p>
+      <h3>테스트3</h3>
+      <p>테스트4</p>
+      <h3>테스트5</h3>
+      <p>테스트6<em>강조</em></p>
+    </div>
+
+</body>
+</html>

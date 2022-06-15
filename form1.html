@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+
+    <title>Profile</title>
+    <style>
+        body {
+            margin-top: 100px;
+            margin-left: 100px;
+            margin-right: 400px;
+            /* background-color: rgb(235, 235, 235); */
+        }
+        fieldset {
+            border: 1px solid rgb(105, 105, 105);
+            background-color: rgb(247, 250, 252);
+            /* background: url('a1.jpg'); */
+        }
+        input {
+            border: 1px solid rgb(218, 218, 218);
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <fieldset>  <!--폼 안에 써야함-->
+            <legend>프로필</legend>
+            <label>이름 <input type="text" placeholder="이름을 입력하세요."></label><br><br>
+            <label for="pw">비밀번호</label>
+            <input type="password" id="pw" placeholder="비밀번호를 입력하세요." maxlength="5"><br><br>
+            <label>검색 <input type="search"></label><br><br>
+            <label>이메일 <input type="email"></label><br><br>
+            <label>전화번호 <input type="tel"></label><br><br> <!--모바일로 보면 키패드가 뜬다.-->
+            <label>url <input type="url"></label><br><br>
+
+            학년 : 
+            <label>1학년<input type="radio" name="grd" value="g1"></label>
+            <label>2학년<input type="radio" name="grd" value="g2"></label>
+            <label>3학년<input type="radio" name="grd" value="g3"></label>
+            <label>4학년<input type="radio" name="grd" value="g4"></label><br><br>
+
+            특강 과목 :
+            <label>영어회화<input type="checkbox" value="en"></label>
+            <label>대학글쓰기<input type="checkbox" value="wrt"></label>
+            <label>이해와소통세미나<input type="checkbox" value="sem"></label>
+            <label>덕성인의기초<input type="checkbox" value="dsw"></label><br><br> <!--체크박스는 name 구별 필요X-->
+            
+            <label>점수 <input type="number" min="0" max="100" step="5"></label><br>
+            <label>점수 <input type="range" min="1" max="100" oninput="document.getElementById('range1').innerHTML=this.value;"></label><br><br>
+            <div style="margin-left: 50px;" id="range1">값</div>
+            <br><br>
+            <input type="date">
+            <input type="month">
+            <input type="week"><br>
+            <input type="time">
+            <input type="datetime-local">
+            <input type="datetime">
+    </form>
+</body>
+</html>

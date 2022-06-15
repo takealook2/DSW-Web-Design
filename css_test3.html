@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+KR&display=swap');
+        body {
+            background: url('background1.jpg');
+            background-size: cover;
+            font-family: 'Noto Serif KR', serif;
+        }
+        #cont {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        .c1 {
+            font-size:3em;
+            /* font-family: 'Noto Serif KR', serif; */
+            color: rgb(255, 255, 255);
+            letter-spacing: 0.3em;
+        }
+        .shad1 { /*가로, 세로, 번짐 정도, 색상*/ 
+            text-shadow: 5px 5px 7px rgb(0, 0, 0);
+            -webkit-text-stroke: 1px rgb(0, 0, 0);
+        }
+        ul {
+            list-style: none;
+            color: white;
+        }
+        h2 {
+            color: white;
+        }
+        li { /*나열해서 쓸 땐 시계방향으로: 위, 오른쪽, 아래, 왼쪽*/
+            border: 1px solid rgba(0, 0, 0, 0);
+            padding: 15px 30px;
+            margin: 20px;
+            background-color: rgba(0, 0, 0, 0.199);
+        }
+        nav {
+            margin-top: 30px;
+            margin-left: 50px;
+            width: 300px;
+        }
+        table {
+            border: 1px solid white;
+            color: white;
+            caption-side: bottom;
+            /* border-spacing: 20px; 선과 선 사이의 거리*/
+            border-collapse: collapse; /* 必 */
+            letter-spacing: 0.1em;
+        }
+        td {
+            border: 1px solid white;
+            padding: 20px 20px; /*위, 오른쪽, 아래, 왼쪽; 위아래, 좌우; 하나만 쓰면 전체, "안쪽 여백"*/
+        }
+    </style>
+</head>
+<body>
+    <div id="cont" class="c1 shad1">디자인의 정석</div>
+    <nav>
+        <h2>2022-1 수강과목</h2>
+            <ul>
+                <li onmouseover="style='background: rgba(0, 0, 0, 0.507);'" onmouseout="style='background: none;'">웹콘텐츠제작</li> <!--javascript-->
+                <li onmouseover="style='background: rgba(0, 0, 0, 0.507);'" onmouseout="style='background: none;'">프로그래밍개론</li>
+                <li onmouseover="style='background: rgba(0, 0, 0, 0.507);'" onmouseout="style='background: none;'">인간과컴퓨터상호작용</li>
+                <li onmouseover="style='background: rgba(0, 0, 0, 0.507);'" onmouseout="style='background: none;'">대학글쓰기</li>
+            </ul>    
+    </nav>
+    <table>
+        <caption>표 연습</caption>
+        <tr>
+            <td>1111</td>
+            <td>1111222</td>
+            <td>1111222333</td>    
+        </tr>
+        <tr>
+            <td>1111</td>
+            <td>1111222</td>
+            <td>1111222333</td>    
+        </tr>
+        <tr>
+            <td>1111</td>
+            <td>1111222</td>
+            <td>1111222333</td>    
+        </tr>
+    </table>
+</body>
+</html>

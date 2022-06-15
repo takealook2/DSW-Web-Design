@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+
+        body {
+            text-align: center;
+        }
+        
+        button {
+            width: 120px;
+            height: 50px;
+            background: white;
+            border: 3px solid rgba(0, 0, 0, 0.719);
+            border-radius: 10px;
+            margin: 10px;
+        }
+
+        #result {
+            width: 600px;
+            height: 400px;
+            border: 5px solid rgb(0, 0, 0);
+            border-radius: 20px;
+            margin: 20px auto;
+            transition: all 1s ease-in-out;
+            animation: chimg 6s infinite ease-in-out;
+
+        }
+
+    @keyframes chimg {
+        from {
+            opacity: 0;
+        }
+
+        50% {
+            opacity: 1;
+        }
+
+        100% {
+            opacity: 1;
+        }
+    }
+        
+    </style>
+</head>
+<body>
+    <button onclick="ch_color('red')">Red</button> <!--color1에 green을 보낸다.-->
+    <button onclick="ch_color('crimson')">Crimson</button>
+    <button onclick="ch_color('pink')">Pink</button>
+    <button onclick="ch_img('a4.jpg')">Image1</button>
+    <button onclick="ch_img('a5.jpg')">Image2</button>
+    <div class="border" id="result"></div>
+
+    <script>
+        function ch_color(color1) {
+            // var result = document.querySelector('#result') 
+            //result라는 아이디를 본문에서 가져와서 새로운 변수인 result에 대입하겠다. 없어도 실행은 됨.
+
+            // var result = document.getElementById('result');
+            
+            result.style.background=color1;
+        }
+
+        function ch_img(image1) {
+            result.style.background="url('"+image1+"')"; //변수인데 문자열로 인식되어서 실행이 안 됐던 것.
+            result.style.backgroundRepeat="no-repeat";
+            result.style.backgroundSize="cover";
+        }
+    </script>
+</body>
+</html>

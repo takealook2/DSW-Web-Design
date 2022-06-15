@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            text-align: center;
+        }
+        .but1 {
+            width: 100px;
+            height: 40px;
+            border-radius: 15px;
+            font-size: 1.3em;
+            border: 0px;
+            display: block;
+            margin: 0 auto;
+            background-color: rgb(159, 168, 215);
+            color: rgb(255, 255, 255);
+        }
+
+        .but2 {
+            width: 100px;
+            height: 40px;
+            border-radius: 15px;
+            font-size: 1.3em;
+            border: 0px;
+            display: block;
+            margin: 0 auto;
+            margin-top: 10px;
+            background-color: rgb(159, 168, 215);
+            color: rgb(255, 255, 255);
+        }
+
+    </style>
+</head>
+<body>
+    <button class="but1" onclick="cal1()">합계1</button>
+    <button class="but2" onclick="sosu()">소수판별</button>
+    <button class="but2" onclick="divisor()">약수판별</button>
+
+    <script>
+        function cal1() {
+            var i, sum=0;
+            var a = parseInt(prompt("첫번째 숫자를 입력!"));
+            var b = parseInt(prompt("마지막 숫자를 입력!"));
+
+            //a에서 b까지 숫자를 더한다.
+            for(i=a; i<=b; i++) 
+            {
+                sum = sum + i;
+            }
+            alert(sum);
+        }
+
+        function sosu() {
+            var i;
+            var num1 = parseInt(prompt("소수를 판별할 수를 입력!"));
+
+            if ( num1 == 2 ) {
+                    alert("소수입니다!");
+                }
+
+            //2로 나눠서 나머지가 1이면 소수, 0이면 빠져나온다.
+            //num1의 직전까지 나눈다.
+            for(i = 2; i < num1; i++)
+            {
+                if (num1 % i == 0) {
+                    alert("소수가 아닙니다.");
+                    break;
+                }
+                else if (i == num1 - 1) { //else로 처리해도 되지 않나?
+                    alert("소수입니다!");
+                    break;
+                }
+
+            }
+        }
+
+
+        
+        function divisor() {
+            var i, s="";
+            var num1 = prompt("약수를 구할 숫자를 입력하세요");
+
+            for(i = 1; i <= num1; i++) {
+                if (num1 % i == 0) {
+                    s = s+i+" ";
+                }
+            }
+            alert(s);
+        }
+    </script>
+</body>
+</html>

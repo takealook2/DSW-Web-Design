@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style> /*좌표가 없으면 static과 relative 가 같다*/
+
+    @import url('https://fonts.googleapis.com/css2?family=Gowun+Batang&display=swap'); 
+
+    body {
+        font-family: 'Gowun Batang', serif;
+        background: linear-gradient(to top, white, rgb(197, 197, 197)) fixed; /*fixed: 전체에 이게 잘리지 않고 깔리게 해줌*/
+        overflow: scroll;
+    }
+
+    h2 {
+        text-align: center;
+    }
+
+    article {
+        border: 3px dotted rgb(0, 0, 0);
+        float: left;
+        width: 350px;
+        height: 280px;
+        padding: 0;
+    }
+    section {
+        width: 800px;
+        margin: 0 auto;
+        padding: 0;
+        clear: left;
+    }
+    article {
+        font-size: 1em;
+        margin: 5px;
+        padding: 15px;
+        text-align: justify;
+    }
+    article > h3 {
+        text-align: center;
+    }
+    .c1 {
+        display: flex;
+        justify-content: center;
+    }
+    .c2 {
+        display: flex;
+        justify-content: center;
+    }
+
+    /* 메뉴 */
+
+    ul {
+        list-style: none;
+        padding: 0;
+    }
+
+    ul li {
+        float: left;
+        text-align: center;
+        line-height: 35px;
+    }
+
+    li a:link, a:visited {
+        text-decoration: none;
+        /* border: 1px solid black; */
+        display: block;
+        width: 130px;
+        height: 35px;
+        color: black;
+        background-color: rgba(0, 0, 0, 0.048);
+        margin: 5px 9px;
+        border-radius: 20px;
+    }
+
+    /* footer */
+
+    li a:hover {
+        /* background-color: rgba(0, 0, 0, 0.137); */
+        background: radial-gradient(circle closest-side at 19px 17px, white, rgb(187, 187, 187));
+    }
+
+    header {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    footer {
+        clear: left;
+        background-color: black;
+        color: white;
+        height: 50px;
+        text-align: center;
+        line-height: 50px;
+    }
+
+    .st {
+        width: 100px;
+        height: 100px;
+        border: 2px solid rgb(255, 0, 128);
+        position: static;
+    }
+
+    .re1 {
+        width: 100px;
+        height: 100px;
+        border: 2px solid rgb(255, 0, 128);
+        position: relative; /*왼쪽으로 100, 위에서 100 이동*/
+        left: 100px;
+        top: 100px;
+    }
+
+    .re2 {
+        width: 100px;
+        height: 100px;
+        border: 2px solid rgb(255, 0, 128);
+        position: relative;
+        left: 100px;
+        top: 100px; 
+    }
+
+    .abs {
+        width: 100px;
+        height: 100px;
+        border: 2px solid rgb(255, 0, 128);
+        position: absolute; /*전체 문서를 기준으로 왼쪽으로 100, 위에서 100 이동*/
+        left: 100px;
+        top: 100px;
+    }
+
+    .fix {
+        width: 100px;
+        height: 100px;
+        border: 2px solid rgb(255, 0, 128);
+        position: fixed; /*전체 문서를 기준으로 왼쪽으로 100, 위에서 100 이동*/
+        right: 50px;
+        top: 50px;
+    }
+
+
+    </style>
+
+</head>
+<body>
+    <header>
+        <ul>
+            <li><a href="layout2.html">Intro</a></li>
+            <li><a href="layout3.html">Profile</a></li>
+            <li><a href="#">Main</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>    
+    </header>
+    <div class="st">
+        static
+    </div>
+    <div class="re1"> <!--re1이 변한다고 re2가 변하진 않음-->
+        relative1
+    </div>
+    <div class="re2">
+        relative2
+    </div>
+    <div class="abs">
+        absolute
+    </div>
+    <div class="fix"> <!--스크롤바를 움직일 때 화면에 고정됨-->
+        fix
+    </div>
+    <footer>
+        <p>boxmodel 연습하기</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+
+    <style>
+
+      .box1 {
+            width: 150px;
+            height: 150px;
+            border: 3px solid transparent; /*이게 더 깨끗하다.*/
+            /* margin: 0 auto; */
+            background-color: rgb(171, 187, 231);
+            animation: shape1 2s 1s infinite alternate ease-in-out; /*일어날 횟수, 방향, 타이밍*/
+        }
+
+        .box2 {
+            width: 150px;
+            height: 150px;
+            border: 3px solid transparent;
+            margin-top: 150px;
+            margin-left: 150px;
+            /* margin: 0 auto; */
+            background-color: rgb(197, 159, 233);
+            animation: shape2 3s infinite alternate ease-in-out, bg1 3s infinite alternate ease-in-out;
+        }
+
+        @keyframes shape1 {
+            to {
+                border: 3px solid rgb(129, 115, 206);
+                border-radius: 50%;
+                background-color: rgb(173, 130, 214);
+            }
+        }
+
+        @keyframes shape2 {
+            from {
+                transform: perspective(120px) rotatex(0deg) rotatey(0deg);
+            }
+            50% {
+                transform: perspective(120px) rotatex(-180deg) rotatey(0deg);
+            }
+            to {
+                transform: perspective(120px) rotatex(-180deg) rotatey(-180deg);
+
+            }
+        }
+
+        @keyframes bg1 {
+           50% {
+               background-color: rgb(53, 35, 155);
+           }
+           to {
+               background-color: rgb(0, 0, 0);
+           }
+        }
+
+        
+
+    </style>
+</head>
+<body>
+    <div class="box1"></div>
+    <div class="box2"></div>
+</body>
+</html>

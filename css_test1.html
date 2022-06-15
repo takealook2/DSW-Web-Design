@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="test1.css"> <!--외부 스타일-->
+    <title>Document</title>
+    <!--내부 스타일-->
+    <style>
+
+        * { 
+            margin:0; 
+        }
+
+        h1 { 
+            color:red;
+        }
+
+        #layout1 {
+            color:blueviolet;
+            font-size: 30px;
+            border: 2px solid coral;
+            width: 300px;
+            height: 100px;
+            display: flex;
+            align-items: center; /*위 아래*/
+            justify-content: center; /*좌우*/ 
+            /*내부적으로 가운데*/
+            position: absolute; /*무조건 그 위치에. 절대적인.*/
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%,-50%);
+
+        }
+
+        .c1 {
+            color: crimson !important
+        }
+
+        .c2 {
+            background-color: wheat;
+        }
+
+        .c1 {
+            color: blue;
+        }
+        
+        div > p {
+            color: orange;
+            font-size: 20px;
+        }
+
+    </style>
+</head>
+<body>
+    <img src="a1.jpg" width="300">
+    <h1 style="color: blue;">덕성여대1</h1> <!--인라인 스타일-->
+    <div id="layout1">덕성여대2</div>
+    <h2 class="c1 c2">덕성여대3</h2>
+    <h3>덕성여대4</h3>
+    <span style="color: violet;" class="c1">덕성여대5</span>
+    <div><p><b>덕성여대6</b></p></div>
+</body>
+</html>

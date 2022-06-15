@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        * {
+            text-align: center;
+        }
+
+        #desc {
+            display: none;
+        }
+
+        #cont {
+            position: relative;
+        }
+
+        #but1 {
+            position: absolute;
+            left: 47.5%;
+            bottom: 7%;
+        }
+        
+        button {
+            border-radius: 10px;
+            border: 1px solid rgba(0, 0, 0, 0);
+            background: rgba(0, 0, 0, 0.589);
+            color: white;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="cont">
+        <img src="a4.jpg" width="300px">
+        <button onclick="show1()" id="but1">상세설명</button>    
+    </div>
+    <div id="desc">
+        <p>사진 1</p>
+        <p>pixabay</p>
+        <button onclick="void1()">설명접기</button>
+    </div>
+    
+    <script>
+        function show1() {
+            // if (desc.style.display=="none")
+            //     {
+            //         desc.style.display="block";
+            //     }
+            // else
+            // {
+            //     desc.style.display="none"
+            // }
+            desc.style.display="block"; //id사용을 전제로 함
+            but1.style.display="none";
+        }
+
+        function void1() {
+            desc.style.display="none";
+            but1.style.display="block";
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style> /*div태그, p태그 block; span태그 inline;*/
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+KR&display=swap');
+        .blo1 { 
+            background: rgb(255, 182, 188);
+            width: 200px;
+            height: 100px;
+            display: inline-block;
+        }
+
+        .in1 {
+            background: rgb(187, 228, 255);
+            width: 200px;
+            height: 100px;
+            display: inline-block; /*인라인 블록을 집어넣으면 크기 지정도 가능*/
+        }
+
+        .box1 {
+            width: 400px;
+            height: 100px;
+            background-color: rgb(228, 198, 255);
+        }
+
+        .box2 {
+            width: 50%;
+            height: 100vh; /*vh: 현재 보는 화면에 따라 달라짐*/
+            background-color: rgb(255, 232, 251);
+        }
+
+        .box3 {
+            width: 300px;
+            height: 100px;
+            border: 2px solid rgb(199, 226, 199);
+            /*padding: 10px;*/
+            margin: 20px auto;
+            box-sizing: border-box; /*border를 포함*/
+            box-shadow: 5px 5px 5px 2px rgb(176, 211, 176); /*x축, y축, 번짐, 흐림; inset: 안 쪽 그림자*/
+            text-align: center;
+            line-height: 100px;
+        }
+
+        .box4 {
+            width: 400px;
+            height: 200px;
+            border: 15px inset rgb(233, 194, 232); /*ridge, dotted, solid, inset, outset ...*/
+            border-top: 10px dotted rgb(255, 182, 188);
+            border-right: thick dashed rgb(105, 146, 173);
+            border-bottom: 20px ridge rgb(228, 198, 255);
+            border-left: 10px groove rgb(177, 127, 177);
+            background-color: rgb(235, 235, 235);
+        }
+
+        .box5 {
+            width: 300px;
+            height: 300px;
+            border: 2px solid rgb(24, 24, 24);
+            border-radius: 50%;
+            /*border-top-left-radius: 100px;
+            border-top-right-radius: 100px;*/
+            background:url('a1.jpg');
+            box-shadow: 8px 5px 15px gray;
+            margin: 100px auto; /*box4를 기준으로 해서 그 주변이 100px, auto는 좌우, auto를 잡으려면 객체의 너비를 잡아야 함*/
+        } /*margin: top right bottom left, 위아래 좌우 "바깥쪽 여백"*/
+       
+        .img1 {
+            width: 300px;
+            height: 300px;
+            border: 2px solid rgb(24, 24, 24);
+            border-radius: 50%;
+        }
+
+        ul {
+            list-style: none;
+            font-family: 'Noto Serif KR', serif;
+            padding: 0;
+            text-align: center;
+        }
+
+        ul li {
+            display: inline-block; /*한 줄 한 줄 자체가 블럭화 되어있기 때문*/
+            border: 1px solid rgba(0, 0, 0, 0.466);
+            border-radius: 15px;
+            width: 100px;
+            height: 30px;
+            margin: 10px 10px;
+            text-align: center;
+            line-height: 30px;
+            letter-spacing: 0.1em;
+        }
+
+        #con1 {
+            width: 600px; /*width를 잡아주는 게 필수*/
+            margin: 0 auto;
+        }
+
+        #con2 {
+            width: 600px; /*width를 잡아주는 게 필수*/
+            margin: 0 auto;
+        }
+
+        ol {
+            list-style: none;
+            font-family: 'Noto Serif KR', serif;
+            border-top: 1px solid;
+            border-bottom: 1px solid;
+            padding: 0;
+            text-align: center;
+        }
+
+        ol li {
+            display: inline-block;
+            width: 100px;
+            height: 30px;
+            margin: 10px 10px;
+            text-align: center;
+            line-height: 30px;
+            letter-spacing: 0.2em;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div id="con1">
+        <ul>
+            <li>Profile</li> 
+            <li>Intro</li>
+            <li>About</li>
+            <li>Contact</li>
+        </ul>    
+    </div>
+    <div id="con2">
+        <ol>
+            <li>Profile</li> 
+            <li>Intro</li>
+            <li>About</li>
+            <li>Contact</li>
+        </ol>
+    </div>
+    <div class="blo1">블록 요소</div> <!--블록, 인라인 한 줄을 차지하는가 하지 않는가-->
+    <span class="in1">인라인 요소1</span>
+    <span class="in1">인라인 요소2</span>
+    <div class="box1">박스1</div>
+    <div class="box2">박스2</div>
+    <div class="box3">박스3</div><br>
+    <div class="box4">박스4</div>
+    <div class="box5">박스5</div>
+    <img src="a1.jpg" class="img1">
+</body>
+</html>

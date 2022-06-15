@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+
+    <title>Document</title>
+    <style>
+        body {
+            margin-top: 100px;
+            margin-left: 100px;
+            margin-right: 400px;
+            /* background-color: rgb(235, 235, 235); */
+        }
+        fieldset {
+            border: 1px solid rgb(105, 105, 105);
+            background-color: rgb(247, 250, 252);
+            /* background: url('a1.jpg'); */
+        }
+        input {
+            border: 1px solid rgb(218, 218, 218);
+        }
+        button {
+            background-color: rgb(153, 205, 226);
+            color: rgb(54, 54, 54);
+            width: 100px; height: 30px;
+            border: 1px solid;
+            border-radius: 10px;
+        }
+    </style>
+
+</head>
+<body>
+    <form method="get" action="aaa.html"> <!--action 어느 파일로 넘길 건지-->
+        <fieldset>
+            <legend>Profile</legend>
+            <ul>
+                <li>
+                    <label>이름 <input type="text" placeholder="이름을 입력하세요." name="id" maxlength="10"></label><br><BR>
+                </li> <!--디자인적으로 정렬될 수 있음? 얘가 맞나?-->
+                <li>
+                    <label for="pw">비밀번호</label>
+                    <input type="password" id="pw" placeholder="비밀번호를 입력하세요." name="pw" autofocus maxlength="10"><br><BR>
+                </li> 
+                <li>
+                    <label>이메일 <input type="email" name="email" value="cat@cat.com" readonly></label><br><BR>
+                </li>
+                <li>
+                    혈액형 :
+                    <label>A형<input type="radio" name="blood" value="b_a"></label>
+                    <label>B형<input type="radio" name="blood" value="b_b"></label>
+                    <label>O형<input type="radio" name="blood" value="b_o"></label>
+                    <label>AB형<input type="radio" name="blood" value="b_ab"></label>
+                </li> <!--같은 name을 가진 것들 중 하나를 선택할 수 있도록 함-->
+            </ul>
+        </fieldset>
+        <br>
+        <input type="submit" value="전송">
+        <input type="reset" value="다시 입력">
+        <input type="image" src="a1.jpg" width="50" height="50"><!--눌렀을 때 이미지의 좌표가 뜬다-->
+        <br><br>
+        <input type="button" value="공지사항" onclick="window.open('a1.jpg', '_blank', 'width=500, height=500',)">
+        <input type="file"><br><br>
+        <input type="hidden" value="고양이" name="hd1"><br>
+        <textarea cols="40" rows="4" name="texta1"></textarea><br>
+        <select name="maj", size="3" multiple> <!--multiple은 컨트롤 같이 눌러야지 선택됨-->
+            <optgroup label="어문계열">
+                <option label="korean" value="ko1">국문</option>
+                <option value="en1">영문</option>    
+            </optgroup>
+            <optgroup label="이공계열">
+                <option value="com1">컴공</option>
+                <option value="math1" selected>수학</option>    
+            </optgroup>
+        </select>
+        <input type="text" list="da_li" name="da_li1" placeholder="점수를 선택해 주세요.">
+        <datalist id="da_li">
+            <option value="A">90 이상</option>
+            <option value="B">80 이상</option>
+            <option value="C">70 이상</option>
+            <option value="D">60 이상</option>
+        </datalist><br><br>
+        <button type="reset">취소하기</button>
+        <button type="submit">제출하기</button>
+        <button type="button" onclick="window.open('a1.jpg', '_blank', 'width=500, height=500',)">공지사항</button>
+    </form>
+</body>
+</html>
